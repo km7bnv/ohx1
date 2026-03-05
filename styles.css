@@ -1,0 +1,86 @@
+:root {
+  --bg-color: #0f172a;
+  --panel-color: #1e293b;
+  --accent-color: #6366f1;
+  --text-color: #f1f5f9;
+  --muted-text: #94a3b8;
+  --border-color: #334155;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main content panel */
+body {
+  background-color: var(--panel-color);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+/* Description text */
+body > p:first-of-type {
+  color: var(--muted-text);
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* Members title */
+h3 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+/* Member list */
+h3 + p,
+h3 + p + p,
+h3 + p + p + p {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 6px 0;
+}
+
+/* Links if you add any later */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
