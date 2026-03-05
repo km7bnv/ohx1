@@ -14,19 +14,23 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
 
+/* Page layout */
+body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Main content panel */
-body {
+.panel {
   background-color: var(--panel-color);
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
   max-width: 700px;
+  width: 90%;
   text-align: center;
 }
 
@@ -37,33 +41,40 @@ h2 {
   color: var(--accent-color);
 }
 
-/* Description text */
-body > p:first-of-type {
+/* Subtitle / description */
+.panel p:first-of-type {
   color: var(--muted-text);
   margin-bottom: 25px;
   line-height: 1.4;
 }
 
-/* Members title */
+/* Section titles */
 h3 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 15px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 6px;
 }
 
-/* Member list */
-h3 + p,
-h3 + p + p,
-h3 + p + p + p {
+/* Member buttons */
+.member-btn {
+  display: block;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
-  padding: 10px;
+  padding: 12px;
+  margin: 8px 0;
   border-radius: 8px;
-  margin: 6px 0;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.2s;
 }
 
-/* Links if you add any later */
+.member-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Back links or normal links */
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -73,14 +84,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* Mobile support */
 @media (max-width: 600px) {
-  body {
-    margin: 20px;
+
+  .panel {
     padding: 25px;
   }
 
   h2 {
     font-size: 26px;
   }
+
 }
