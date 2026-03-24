@@ -96,3 +96,20 @@ a:hover {
   }
 
 }
+/* Service buttons */
+.service-btn {
+  display: block;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.2s;
+}
+
+.service-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
